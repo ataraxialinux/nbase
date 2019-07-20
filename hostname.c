@@ -39,11 +39,9 @@
 
 extern	char *__progname;
 
-static void __dead usage(void);
+static void usage(void);
 
-int
-main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
 	int ch, sflag;
 	char *p, hostname[HOST_NAME_MAX+1];
 
@@ -75,9 +73,7 @@ main(int argc, char *argv[])
 	return(0);
 }
 
-static void __dead
-usage(void)
-{
+static void usage(void) {
 	(void)fprintf(stderr, "usage: %s [-s] [name-of-host]\n", __progname);
 	exit(1);
 }
